@@ -48,7 +48,7 @@
     }
     </script>
     
-    <link rel="stylesheet" href="styles.css?v=4.2">
+    <link rel="stylesheet" href="styles.css?v=4.4">
 </head>
 <body>
     <nav class="nav">
@@ -108,22 +108,26 @@
 
         <!-- About Section -->
         <section class="about">
-            <div class="about-background-image" id="about-background-image">
-                <img id="about-bg-img" src="" alt="About background" class="about-bg-img" loading="lazy" decoding="async">
-            </div>
             <div class="container">
                 <div class="about-grid">
                     <div class="about-left">
                         <!-- Image space - empty, image is in background -->
                     </div>
+                    <div class="about-background-image" id="about-background-image">
+                        <img id="about-bg-img" src="" alt="About background" class="about-bg-img" loading="lazy" decoding="async">
+                    </div>
                     <div class="about-right">
-                        <p class="section-subheading">About</p>
-                        <h2 class="section-title-large">About Me</h2>
-                        <p class="about-text">
-                            I am a filmmaker and video editor focused on cinematic visual storytelling and commercial video production. My work combines strong aesthetics, precise editing, and thoughtful narrative direction to create engaging visual content for brands and digital media.
-                        </p>
-                        <p class="about-text-small">I have worked on a variety of productions including commercial campaigns, branded content, events, and podcasts, often managing projects from concept through final delivery.</p>
-                        <a href="#contact" class="btn-cta">Get in touch →</a>
+                        <div class="about-title-group">
+                            <p class="section-subheading">About</p>
+                            <h2 class="section-title-large">About Me</h2>
+                        </div>
+                        <div class="about-body-group">
+                            <p class="about-text">
+                                I am a filmmaker and video editor focused on cinematic visual storytelling and commercial video production. My work combines strong aesthetics, precise editing, and thoughtful narrative direction to create engaging visual content for brands and digital media.
+                            </p>
+                            <p class="about-text-small">I have worked on a variety of productions including commercial campaigns, branded content, events, and podcasts, often managing projects from concept through final delivery.</p>
+                            <a href="#contact" class="btn-cta">Get in touch →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,46 +161,50 @@
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-left">
-                        <p class="section-subheading">Get in Touch</p>
-                        <h2 class="section-title-large">Let's Create Something Meaningful</h2>
-                        <p class="contact-text">
-                            For projects, collaborations, or commercial work, feel free to reach out.
-                        </p>
-                        <div class="contact-buttons" id="contact-buttons">
-                            <a href="#" id="contact-email-btn" class="btn-cta contact-btn-primary" style="display: none;">
-                                <span>Email</span>
-                                <span class="contact-btn-arrow">→</span>
-                            </a>
-                            <a href="#" id="contact-phone-btn" class="btn-cta contact-btn-primary" style="display: none;">
-                                <span>Phone</span>
-                                <span class="contact-btn-arrow">→</span>
-                            </a>
-                            <a href="#" id="contact-whatsapp-btn" class="btn-cta contact-btn-whatsapp" target="_blank" rel="noopener noreferrer" style="display: none;">
-                                <span>WhatsApp</span>
-                                <span class="contact-btn-arrow">→</span>
-                            </a>
-                            <a href="#" id="contact-instagram-btn" class="btn-cta contact-btn-outline" target="_blank" rel="noopener noreferrer" style="display: none;">
-                                <span>Instagram</span>
-                                <span class="contact-btn-arrow">→</span>
-                            </a>
+                        <div class="contact-title-group">
+                            <p class="section-subheading">Get in Touch</p>
+                            <h2 class="section-title-large">Let's Create Something Meaningful</h2>
                         </div>
-                        <div class="contact-info" id="contact-info" style="display: none;">
-                            <div class="contact-info-item" id="contact-email-info" style="display: none;">
-                                <span class="contact-info-label">Email:</span>
-                                <span class="contact-info-value" id="contact-email-value"></span>
+                        <div class="contact-background-image" id="contact-background-image">
+                            <img id="contact-bg-img" src="" alt="Contact background" class="contact-bg-img" loading="lazy" decoding="async">
+                        </div>
+                        <div class="contact-body-group">
+                            <p class="contact-text">
+                                For projects, collaborations, or commercial work, feel free to reach out.
+                            </p>
+                            <div class="contact-buttons" id="contact-buttons">
+                                <a href="#" id="contact-email-btn" class="btn-cta contact-btn-primary" style="display: none;">
+                                    <span>Email</span>
+                                    <span class="contact-btn-arrow">→</span>
+                                </a>
+                                <a href="#" id="contact-phone-btn" class="btn-cta contact-btn-primary" style="display: none;">
+                                    <span>Phone</span>
+                                    <span class="contact-btn-arrow">→</span>
+                                </a>
+                                <a href="#" id="contact-whatsapp-btn" class="btn-cta contact-btn-whatsapp" target="_blank" rel="noopener noreferrer" style="display: none;">
+                                    <span>WhatsApp</span>
+                                    <span class="contact-btn-arrow">→</span>
+                                </a>
+                                <a href="#" id="contact-instagram-btn" class="btn-cta contact-btn-outline" target="_blank" rel="noopener noreferrer" style="display: none;">
+                                    <span>Instagram</span>
+                                    <span class="contact-btn-arrow">→</span>
+                                </a>
                             </div>
-                            <div class="contact-info-item" id="contact-phone-info" style="display: none;">
-                                <span class="contact-info-label">Phone:</span>
-                                <span class="contact-info-value" id="contact-phone-value"></span>
+                            <div class="contact-info" id="contact-info" style="display: none;">
+                                <div class="contact-info-item" id="contact-email-info" style="display: none;">
+                                    <span class="contact-info-label">Email:</span>
+                                    <span class="contact-info-value" id="contact-email-value"></span>
+                                </div>
+                                <div class="contact-info-item" id="contact-phone-info" style="display: none;">
+                                    <span class="contact-info-label">Phone:</span>
+                                    <span class="contact-info-value" id="contact-phone-value"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="contact-right">
                         <!-- Image space - empty, image is in background -->
                     </div>
-                </div>
-                <div class="contact-background-image" id="contact-background-image">
-                    <img id="contact-bg-img" src="" alt="Contact background" class="contact-bg-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>

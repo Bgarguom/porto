@@ -536,6 +536,13 @@ section + section {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .about {
+        padding: var(--spacing-sm) 0;
+        overflow: visible;
+    }
+}
+
 .about-background-image {
     position: absolute;
     top: 50%;
@@ -581,16 +588,29 @@ section + section {
     .about-background-image {
         width: 100%;
         max-width: 100%;
-        height: auto;
-        min-height: 280px;
-        aspect-ratio: 4 / 3;
         left: 0;
         right: 0;
         top: auto;
         transform: none;
-        margin-bottom: var(--spacing-md);
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
         position: relative;
         border-radius: 16px;
+        /* توافق الهاتف: ارتفاع ثابت يعمل في كل المتصفحات */
+        height: 0;
+        padding-bottom: 75%;
+        min-height: 0;
+        overflow: hidden;
+    }
+    
+    .about-background-image .about-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -607,17 +627,64 @@ section + section {
 }
 
 .about-left {
+    grid-column: 1;
     max-width: 100%;
     position: relative;
     z-index: 2;
     min-height: 400px;
 }
 
+.about-background-image {
+    grid-column: 1;
+}
+
 .about-right {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: flex-end;
+    grid-column: 2;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .about-left {
+        display: none;
+    }
+    
+    .about-right {
+        display: contents;
+    }
+    
+    .about-title-group {
+        order: 1;
+    }
+    
+    .about-background-image {
+        order: 2;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .about-body-group {
+        order: 3;
+    }
+    
+    .about-text,
+    .about-text-small {
+        text-align: left;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-right {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: flex-end;
+    }
 }
 
 .about-text {
@@ -776,6 +843,32 @@ section + section {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .contact {
+        padding: var(--spacing-sm) 0;
+        overflow: visible;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-right {
+        display: none;
+    }
+    
+    .contact-left {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-background-image {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+}
+
 .contact .container {
     position: relative;
     z-index: 1;
@@ -846,16 +939,29 @@ section + section {
     .contact-background-image {
         width: 100%;
         max-width: 100%;
-        height: auto;
-        min-height: 280px;
-        aspect-ratio: 4 / 3;
         right: 0;
         left: 0;
         top: auto;
         transform: none;
-        margin-top: var(--spacing-md);
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
         position: relative;
         border-radius: 16px;
+        /* توافق الهاتف: ارتفاع ثابت يعمل في كل المتصفحات */
+        height: 0;
+        padding-bottom: 75%;
+        min-height: 0;
+        overflow: hidden;
+    }
+    
+    .contact-background-image .contact-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -1230,7 +1336,7 @@ section + section {
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-md);
+        gap: 1rem;
     }
 
     .project-details {
@@ -1238,16 +1344,16 @@ section + section {
     }
 
     section {
-        padding: var(--spacing-lg) 0;
+        padding: var(--spacing-sm) 0;
     }
 
     .hero {
-        padding: calc(var(--spacing-lg) + 60px) var(--spacing-xs) var(--spacing-md);
+        padding: calc(var(--spacing-sm) + 50px) var(--spacing-xs) var(--spacing-sm);
         min-height: auto;
     }
     
     .hero-container {
-        gap: var(--spacing-md);
+        gap: 1rem;
     }
     
     .hero-content {
@@ -1333,8 +1439,8 @@ section + section {
     }
     
     .contact-info {
-        margin-top: var(--spacing-lg);
-        padding-top: var(--spacing-md);
+        margin-top: 1.25rem;
+        padding-top: 1rem;
     }
     
     .contact-info-label {
@@ -1349,13 +1455,14 @@ section + section {
     .contact-background-image {
         position: relative;
         width: 100%;
-        height: auto;
-        min-height: 260px;
-        aspect-ratio: 4 / 3;
+        height: 0;
+        padding-bottom: 75%;
+        overflow: hidden;
         right: 0;
         transform: none;
         top: 0;
-        margin-top: var(--spacing-md);
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
         border-radius: 16px;
     }
     
@@ -1363,26 +1470,19 @@ section + section {
         min-height: 0;
     }
     
-    /* About section mobile */
-    .about-grid {
-        gap: var(--spacing-md);
-    }
-    
+    /* About section mobile – title, image, body order set above */
     .about-background-image {
         position: relative;
         width: 100%;
-        height: auto;
-        min-height: 260px;
-        aspect-ratio: 4 / 3;
+        height: 0;
+        padding-bottom: 75%;
+        overflow: hidden;
         left: 0;
         transform: none;
         top: 0;
-        margin-bottom: var(--spacing-md);
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
         border-radius: 16px;
-    }
-    
-    .about-left {
-        order: -1;
     }
     
     /* Project cards mobile – keep 16:9 aspect ratio */
@@ -1403,7 +1503,27 @@ section + section {
     
     /* Section padding mobile */
     section {
-        padding: var(--spacing-md) 0;
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .featured-projects {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .projects-header {
+        margin-bottom: 1rem;
+    }
+    
+    .featured-projects-cta {
+        margin-top: 1rem;
+    }
+    
+    .section-title {
+        margin-bottom: 1rem;
+    }
+    
+    .section-title-large {
+        margin-bottom: 1.25rem;
     }
     
     /* Typography mobile adjustments */
@@ -1445,8 +1565,7 @@ section + section {
     
     .about-background-image,
     .contact-background-image {
-        min-height: 220px;
-        aspect-ratio: 16 / 10;
+        padding-bottom: 62.5%;
     }
 }
 
