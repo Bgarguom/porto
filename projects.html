@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Primary Meta Tags -->
+    <title>Projects - Bashir Garguom | Commercial Films & Brand Visuals</title>
+    <meta name="title" content="Projects - Bashir Garguom | Commercial Films & Brand Visuals">
+    <meta name="description" content="A selection of commercial films, brand visuals, and creative work by Bashir Garguom. Cinematic visual storytelling for brands, campaigns, and modern commercial work.">
+    <meta name="keywords" content="commercial films, brand videos, visual campaigns, filmmaker portfolio, commercial video production">
+    <meta name="author" content="Bashir Garguom">
+    <link rel="canonical" href="/projects.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bashirgarguom.com/projects.html">
+    <meta property="og:title" content="Projects - Bashir Garguom">
+    <meta property="og:description" content="A selection of commercial films, brand visuals, and creative work.">
+    <meta property="og:image" content="https://bashirgarguom.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://bashirgarguom.com/projects.html">
+    <meta name="twitter:title" content="Projects - Bashir Garguom">
+    <meta name="twitter:description" content="A selection of commercial films, brand visuals, and creative work.">
+    <meta name="twitter:image" content="https://bashirgarguom.com/images/og-image.jpg">
+    
+    <link rel="stylesheet" href="styles.css?v=3.0">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Bashir Garguom</a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="index.html#contact" class="nav-cta">Get in touch →</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="projects-page">
+            <div class="container">
+                <div class="projects-page-header">
+                    <h1 class="page-title">Projects</h1>
+                    <p class="projects-page-intro">A selection of commercial films, brand visuals, and creative work.</p>
+                </div>
+                <div class="projects-grid" id="all-projects-grid">
+                    <!-- Projects will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Bashir Garguom. All rights reserved.</p>
+        </div>
+    </footer><script>
+        // Load all projects on projects page after scripts are loaded
+        function initProjectsPage() {
+            if (typeof loadAllProjects === 'function' && document.getElementById('all-projects-grid')) {
+                loadAllProjects();
+            } else if (document.getElementById('all-projects-grid')) {
+                // Retry if scripts not loaded yet
+                setTimeout(initProjectsPage, 100);
+            }
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initProjectsPage);
+        } else {
+            initProjectsPage();
+        }
+    </script>
+    <script>window.__PROJECTS_DATA__ = {"projects":[{"id":"benghazi-corniche-a-story-of-a-city","title":"Benghazi Corniche — A Story of a City","headline":"A short film capturing the emotional connection between Benghazi and its iconic waterfront after years of change.","description":"\nProject Type: Short Film / Documentary\nRole: Director, Cinematographer, Colorist","client":null,"year":null,"project_type":"Short Film / Documentary","project_role":"Director, Cinematographer, Colorist","featured":true,"thumbnail":"https://i.postimg.cc/yNjyRrLF/Screenshot-2026-03-09-at-12-29-57-AM.png","media":{"type":"video","url":"https://youtu.be/0cKJd33xlck","poster":"https://i.postimg.cc/yNjyRrLF/Screenshot-2026-03-09-at-12-29-57-AM.png"},"gallery_images":[]},{"id":"majal-building-the-future","title":"Majal — Building the Future","headline":"A cinematic commercial highlighting Majal’s","description":"This cinematic commercial film was produced to highlight Majal’s involvement in supplying raw materials for one of the largest residential developments in Libya, consisting of more than 20,000 housing units. The visual approach focuses on the scale and movement of the construction site, combining cinematic ground shots with aerial drone footage to reveal the magnitude of the project. Through structured visual storytelling and a carefully written script, the film presents Majal’s role within the supply chain of the development, emphasizing the connection between infrastructure, materials, and the future growth of the city.","client":"Majal","year":"2025","project_type":"Commercial / Brand Film","project_role":"Director, Cinematographer, Drone Operator","featured":false,"thumbnail":"https://img.youtube.com/vi/52KLmx4BWFY/maxresdefault.jpg","media":{"type":"video","url":"https://youtu.be/52KLmx4BWFY","poster":"https://img.youtube.com/vi/52KLmx4BWFY/maxresdefault.jpg"},"gallery_images":[]},{"id":"g-ant-hypermarket-libya-opening","title":"Géant Hypermarket — Libya Opening","headline":"Capturing the launch of one of Libya’s major international retail openings.","description":"This project documents the official opening of Géant Hypermarket in Libya, an event attended by international representatives and key guests. The film focuses on capturing the atmosphere and scale of the launch, combining cinematic event coverage with aerial drone visuals to highlight the presence and energy of the opening day. Through dynamic camera work and structured editing, the final video presents the event as a milestone moment for the brand’s entry into the Libyan market","client":"Géant  Libya","year":"2025","project_type":"Event Film / Commercial Coverage","project_role":"Director of Photography, Drone Operator, Video Editor","featured":false,"thumbnail":"https://img.youtube.com/vi/CTdKZ18bGXc/maxresdefault.jpg","media":{"type":"video","url":"https://youtu.be/CTdKZ18bGXc","poster":"https://img.youtube.com/vi/CTdKZ18bGXc/maxresdefault.jpg"},"gallery_images":[]},{"id":"design-studio-visualizing-architecture","title":"Design Studio — Visualizing Architecture","headline":"A cinematic commercial presenting architectural design through immersive VR technology.","description":"A commercial film produced for a design studio showcasing its architectural services and virtual reality design experience.\nThe video highlights how VR technology allows clients to explore and experience projects before construction","client":"MAJAL Design Studio","year":"2025","project_type":"Commercial / Brand Film","project_role":"Cinematographer, Video Editor","featured":false,"thumbnail":"https://i.postimg.cc/V6d00gGX/Screenshot-2026-03-09-at-1-12-49-AM.png","media":{"type":"video","url":"https://youtu.be/BEgGqHp3hSc?si=UehHm9_YZrPTDmQg","poster":"https://i.postimg.cc/V6d00gGX/Screenshot-2026-03-09-at-1-12-49-AM.png"},"gallery_images":[]},{"id":"al-rabee-international-brand-introduction","title":"Al Rabee International — Brand Introduction","headline":"A cinematic introduction to Al Rabee International, Hisense Libya","description":"This brand introduction film was produced to present Al Rabee International, the official distributor of Hisense in Libya. The project was developed to introduce the company’s role in delivering international technology brands to the Libyan market. Through cinematic visuals and structured storytelling, the film highlights the company’s products, operations, and brand presence. The production approach focuses on clean commercial imagery and controlled visual pacing to present the company in a professional and modern light.","client":"Hisense Libya","year":null,"project_type":"Brand Film / Corporate Video","project_role":"Cinematographer, Editor","featured":false,"thumbnail":"https://img.youtube.com/vi/HDZqsYgUi9E/maxresdefault.jpg","media":{"type":"video","url":"https://youtu.be/HDZqsYgUi9E","poster":"https://img.youtube.com/vi/HDZqsYgUi9E/maxresdefault.jpg"},"gallery_images":[]},{"id":"derham-podcast-business-conversations","title":"Derham Podcast — Business Conversations","headline":"podcast exploring business, investment, and economic development in Libya","description":"Derham Podcast is a long-form discussion platform focused on business, entrepreneurship, and large-scale projects shaping the Libyan economy. The production was developed with a cinematic studio approach, where the visual environment, lighting design, and camera composition were carefully crafted to create a professional and visually engaging podcast format. As Director of Photography and Art Director for the set design and lighting setup, the work involved building the visual identity of the studio space and establishing a consistent cinematic style for the show. The podcast later gained significant recognition and was awarded Best Podcast in Libya in 2025","client":"Derham Podcast","year":"2024","project_type":"Podcast / Studio Production","project_role":"DOP ,  Art Director (Set & Lighting Design)","featured":true,"thumbnail":"https://img.youtube.com/vi/roIyZg76Z90/maxresdefault.jpg","media":{"type":"video","url":"https://youtu.be/roIyZg76Z90?si=ZRvVQF-jCzXQTsU4","poster":"https://img.youtube.com/vi/roIyZg76Z90/maxresdefault.jpg"},"gallery_images":[]},{"id":"benghazi-international-stadium-opening-ceremony","title":"Benghazi International Stadium — Opening Ceremony","headline":"Capturing the opening ceremony of Benghazi International Stadium.","description":"This project documents the official opening ceremony of Benghazi International Stadium in 2025, a landmark sporting event and one of the largest public events held in Libya in recent years. The production focused on capturing the atmosphere, scale, and energy of the ceremony through dynamic event cinematography. The coverage highlights the visual spectacle of the opening event, the audience presence, and the significance of the stadium’s launch as a major moment for sports and public life in the city of Benghazi","client":"Benghazi International Stadium ","year":"2025","project_type":"Event Film / Sports Event Coverage","project_role":"Video Camera Operator","featured":true,"thumbnail":"https://i.postimg.cc/JzNGtqJ2/Screenshot-2026-03-09-at-5-35-10-AM.png","media":{"type":"video","url":"https://youtu.be/9RXze-GzdUI","poster":"https://i.postimg.cc/JzNGtqJ2/Screenshot-2026-03-09-at-5-35-10-AM.png"},"gallery_images":[]}],"siteSettings":{"hero_portrait_image":null,"about_background_image":"https://i.postimg.cc/RCp9wL8p/IMG-0227.jpg","contact_image":"https://i.postimg.cc/L5SHddQp/IMG-0249.jpg","contact_email":"alibesho@gmail.com","contact_phone":"+218923379054","contact_whatsapp":"218923379054","contact_instagram":"https://www.instagram.com/b_garguom/"}};</script>
+    <script src="video-embed.js" defer></script>
+    <script src="script.production.js" defer></script>
+</body>
+</html>
