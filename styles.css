@@ -24,6 +24,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -34,9 +36,9 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* Touch-friendly */
     -webkit-tap-highlight-color: rgba(255, 107, 53, 0.2);
     touch-action: manipulation;
+    min-width: 280px;
 }
 
 /* Navigation */
@@ -49,6 +51,7 @@ body {
     background-color: rgba(10, 10, 10, 0.7);
     backdrop-filter: blur(8px);
     padding: var(--spacing-xs) 0;
+    padding-top: max(var(--spacing-xs), env(safe-area-inset-top));
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -140,8 +143,11 @@ body {
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    width: 32px;
-    height: 32px;
+    align-items: center;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -551,6 +557,7 @@ section + section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     opacity: 0;
     filter: brightness(0.9);
     z-index: 0;
@@ -572,9 +579,17 @@ section + section {
 
 @media (max-width: 768px) {
     .about-background-image {
-        width: calc(50% - var(--spacing-xs));
-        height: 90%;
-        left: var(--spacing-xs);
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 280px;
+        aspect-ratio: 4 / 3;
+        left: 0;
+        right: 0;
+        top: auto;
+        transform: none;
+        margin-bottom: var(--spacing-md);
+        position: relative;
         border-radius: 16px;
     }
 }
@@ -807,6 +822,7 @@ section + section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     opacity: 0;
     filter: brightness(0.9);
     z-index: 0;
@@ -828,9 +844,17 @@ section + section {
 
 @media (max-width: 768px) {
     .contact-background-image {
-        width: calc(50% - var(--spacing-xs));
-        height: 90%;
-        right: var(--spacing-xs);
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 280px;
+        aspect-ratio: 4 / 3;
+        right: 0;
+        left: 0;
+        top: auto;
+        transform: none;
+        margin-top: var(--spacing-md);
+        position: relative;
         border-radius: 16px;
     }
 }
@@ -1087,6 +1111,7 @@ section + section {
 /* Footer */
 .footer {
     padding: var(--spacing-xl) 0;
+    padding-bottom: max(var(--spacing-xl), env(safe-area-inset-bottom));
     margin-top: var(--spacing-xl);
     background: #050505;
     border-top: 2px solid rgba(255, 107, 53, 0.4);
@@ -1151,19 +1176,28 @@ section + section {
         display: flex;
     }
     
+    .nav-container {
+        padding: 0 var(--spacing-xs);
+        padding-right: max(var(--spacing-xs), env(safe-area-inset-right));
+    }
+    
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 85%;
         max-width: 320px;
         height: 100vh;
+        height: 100dvh;
+        padding-top: max(5rem, env(safe-area-inset-top));
+        padding-bottom: env(safe-area-inset-bottom);
         background-color: rgba(0, 0, 0, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: var(--spacing-xl) var(--spacing-md);
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
         gap: var(--spacing-md);
         transition: right 0.3s ease;
         z-index: 1000;
@@ -1315,7 +1349,9 @@ section + section {
     .contact-background-image {
         position: relative;
         width: 100%;
-        height: 300px;
+        height: auto;
+        min-height: 260px;
+        aspect-ratio: 4 / 3;
         right: 0;
         transform: none;
         top: 0;
@@ -1324,7 +1360,7 @@ section + section {
     }
     
     .contact-right {
-        min-height: 300px;
+        min-height: 0;
     }
     
     /* About section mobile */
@@ -1335,7 +1371,9 @@ section + section {
     .about-background-image {
         position: relative;
         width: 100%;
-        height: 300px;
+        height: auto;
+        min-height: 260px;
+        aspect-ratio: 4 / 3;
         left: 0;
         transform: none;
         top: 0;
@@ -1376,6 +1414,39 @@ section + section {
     
     .section-subheading {
         font-size: clamp(0.875rem, 3vw, 1rem);
+    }
+    
+    .hero-name {
+        font-size: clamp(2.5rem, 12vw, 5rem);
+    }
+    
+    .btn-cta {
+        min-height: 48px;
+        padding: 1rem 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .hero-name {
+        font-size: clamp(2rem, 11vw, 4rem);
+    }
+    
+    .nav-logo {
+        font-size: 1rem;
+    }
+    
+    .about-background-image,
+    .contact-background-image {
+        min-height: 220px;
+        aspect-ratio: 16 / 10;
     }
 }
 

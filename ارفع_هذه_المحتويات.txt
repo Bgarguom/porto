@@ -1,0 +1,13 @@
+ارفع كل الملفات والمجلدات داخل هذا المجلد (dist) إلى الاستضافة.
+
+الملفات:
+- index.html          (الصفحة الرئيسية)
+- projects.html       (صفحة المشاريع)
+- project.html        (صفحة المشروع الواحد)
+- styles.css          (التصميم)
+- script.production.js
+- video-embed.js
+- images/             (مجلد الصور - ارفعه كاملاً)
+- videos/             (مجلد الفيديوهات - ارفعه كاملاً)
+
+لا ترفع مجلد admin أو config أو أي ملف خارج dist.
